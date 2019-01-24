@@ -1,0 +1,72 @@
+# Custom Defines
+HEADER_SZ = 24
+
+# Status Codes
+HASP_STATUS_OK = 0
+HASP_MEM_RANGE = 1
+HASP_INV_FILEID  = 10
+HASP_NO_TIME  = 12
+HASP_INV_VCODE = 22
+HASP_INV_HND = 9
+HASP_TOO_SHORT = 8
+HASP_DEVICE_ERR = 43
+HASP_SCHAN_ERR = 46
+HASP_ERR_BROKEN_SESSION = 0x7F000027
+
+
+# API Constants
+HASP_FILEID_RW = 0xfff4
+HASP_FILEID_RO = 0xfff5
+
+SCOPE_LM = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><haspscope><hasp type=\"HASP-HL\"><license_manager ip=\"127.0.0.1\" /></hasp></haspscope>"
+SCOPE_HANDLE = "<haspscope><session handle=\"%d\"/></haspscope>"
+
+FORMAT_GETID = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><haspformat><hasp><attribute name=\"id\" /></hasp></haspformat>"
+FORMAT_GETSESSION = "<haspformat root=\"hasp_info\"><si_feature /></haspformat>"
+FORMAT_GETKEYINFO = "<haspformat root=\"hasp_info\"><si_container /></haspformat>"
+
+SPEC_FEATURE_ID = "<haspspec><feature id=\"%d\" /></haspspec>"
+
+# Operation IDs
+OPERATION_ID_ADMIN = 0 # Not Used - Admin or Get LMS Version?
+OPERATION_ID_ECHO = 1 # Not Used
+OPERATION_ID_LOGIN = 0x2711
+OPERATION_ID_LOGOUT = 0x2712
+OPERATION_ID_LOGINSCOPE = 0x2713
+OPERATION_ID_GETINFO = 0x2714
+OPERATION_ID_PARSE_SCOPE = 0x2715 # Not Used
+OPERATION_ID_SETUPSCHANNEL = 0x2716
+OPERATION_ID_ENCRYPT =0x2724
+OPERATION_ID_DECRYPT = 0x2725
+OPERATION_ID_READ = 0x271A
+OPERATION_ID_WRITE = 0x271B
+OPERATION_ID_GETSIZE = 0x271C
+OPERATION_ID_GETRTC = 0x271D
+OPERATION_ID_GETAPIUID = 0x2774
+OPERATION_ID_UPDATE = 0x2775 # Not Used
+OPERATION_ID_DETACH = 0x2779 # Not Used
+
+
+# Operational Object IDs
+OID_CLIENTID_REQ = 0x7F34
+OID_CLIENTID_REP =0x7F35
+OID_LOGIN_REQ = 0x61
+OID_LOGIN_REP = 0x62
+OID_LOGINSCOPE_REQ = 0x63
+OID_LOGINSCOPE_REP = 0x64
+OID_LOGOUT_REQ = 0x65
+OID_LOGOUT_REP = 0x66
+OID_INFO_REQ = 0x67
+OID_INFO_REP = 0x68
+OID_READ_REQ = 0x6A
+OID_READ_REP = 0x6B
+OID_WRITE_REQ = 0x6C
+OID_WRITE_REP = 0x6D
+OID_GETSIZE_REQ = 0x6E
+OID_GETSIZE_REP = 0x6F
+OID_GETRTC_REQ = 0x70
+OID_GETRTC_REP = 0x71
+OID_SCHANNEL_REQ = 0x72
+OID_SCHANNEL_REP = 0x73
+OID_CRYPT_REQ = 0x77
+OID_CRYPT_REP = 0x78
